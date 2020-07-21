@@ -1,5 +1,4 @@
 # Color bump 3D
-Made for ZENITH GAMES
 
 I spended for this a bit more than 5h and testing with family and friends 2h xD
 ![scene](scene1.png)
