@@ -3,6 +3,12 @@
 public class ColorBump : MonoBehaviour
 {
     public Controller player;
+    private Renderer r;
+
+    private void Start()
+    {
+        r = player.GetComponent<Renderer>();
+    }
 
     private void Update()
     {
@@ -21,6 +27,6 @@ public class ColorBump : MonoBehaviour
 
     void swapColor(GameObject edge)
     {
-        player.GetComponent<Renderer>().sharedMaterial = edge.GetComponent<Renderer>().sharedMaterial;
+        r.sharedMaterial = edge.GetComponent<Renderer>().sharedMaterial;
     }
 }

@@ -5,26 +5,27 @@ using UnityEngine.SceneManagement;
 public class Controller : MonoBehaviour
 {
     [Range(1, 10)]
-    public float speed = 1;
+    [SerializeField] private float speed = 1;
 
     private Vector3 startPos;
     private Vector3 deltaPos;
 
     private Rigidbody rb;
 
-    public float slowMotion = 2f;
-    public Animator animator;
-    public Text text; 
+    [SerializeField] private float slowMotion = 2f;
+    [SerializeField] private Animator animator;
+    [SerializeField] private Text text; 
 
     [Header("Edge Z")]
-    public float minCameraDis = -4f;
+    [SerializeField] private float minCameraDis = -4f;
 
+    [HideInInspector]
     public bool gameOver = false;
     private bool gameStart;
 
     private bool onMeta;
 
-    public Text timeText;
+    [SerializeField] private Text timeText;
     private float timer;
 
     void Awake()

@@ -4,9 +4,7 @@ using UnityEngine.UI;
 public class Progress : MonoBehaviour
 {
     public Controller player;
-
     public Slider slider;
-
     public GameObject record;
 
     private void Start()
@@ -28,13 +26,17 @@ public class Progress : MonoBehaviour
 
         if (player.gameOver)
         {
-            float rec = PlayerPrefs.GetFloat("Record");
-
-            if (rec < slider.value)
-            {
-                PlayerPrefs.SetFloat("Record", slider.value);
-            }
+            SetRecord();
         }
+    }
 
+    private void SetRecord()
+    {
+        float rec = PlayerPrefs.GetFloat("Record");
+
+        if (rec < slider.value)
+        {
+            PlayerPrefs.SetFloat("Record", slider.value);
+        }
     }
 }
